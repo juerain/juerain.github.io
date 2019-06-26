@@ -1,0 +1,1112 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	  /*清除所有元素的内外边距*/
+	  *{margin:0;padding:0;}
+		/*设置最外层div的宽度，内容水平居中*/
+		.box{
+		  width:1200px;
+			margin:0 auto;
+		}
+    /*设置头部宽度，高度*/
+		.my-header{
+		  width:100%;
+			height:170px;
+		}
+		/*轮播图div的样式*/
+		.carousel{
+		  width:1210px;
+			height:350px;
+			background:#ddd;
+		}
+		.carousel-img{
+		  float:left;
+		}
+		/*轮播图右侧条目样式*/
+		.carousel-item{
+		  list-style:none;
+      margin-top:10px;
+		}
+		.carousel-item{
+		  width:480px;
+			height:350px;
+			margin-top:20px;
+			float:left;
+		}
+		.carousel-item>ul li{
+		  width:480px;
+			height:50px;
+			margin-left:40px;
+		  list-style:none;
+      color:#fff;
+			font-size:22px;
+			font-weight:bolder;
+		}
+		/*热播影视样式*/
+		h3{
+			color:#666666;
+			clear:both;
+			margin-bottom:10px;
+			margin-left:8px
+		}
+		.hot-tv-img{
+			text-align:center;
+		  float:left;
+			margin:10px;
+		}
+		.hot-tv-img img{
+		  width:180px;
+			height:250px;
+    }
+		.hot-tv-img p a{
+		  text-decoration:none;
+			color:#00f;
+		}
+		/*电视节目表样式*/
+		.tv-item>p{
+			margin-left:10px;
+			margin-bottom:10px;
+		}
+		.tv-item span{
+		  display:block;
+			margin-left:100px;
+			margin-top:-15px;
+			font-size:14px;
+		}
+		.tv-item hr{
+		  clear:both;
+		}
+		.item p a{
+		  color:#00f;
+			text-decoration:none;
+		}
+		.item ul li{
+		  list-style:none;
+		}
+		.item div{
+		  float:left;
+		}
+	  dl{
+		  width:400px;
+			height:101px;
+			list-style:none;
+			border-bottom:1px dotted #000;
+			float:left;
+			margin-top:5px;
+		}
+		dl dt{
+		  float:left;
+			padding-left:10px;
+		}
+		dl dd{
+		  float:left;
+			margin:5px 30px;
+		}
+		.item dl dt a{
+		  text-decoration:none;
+		}
+		.item dl dt a p{
+		  color:#1540F0;
+		}
+		dl>dd>p{
+		  margin-bottom:10px;
+			font-size:14px;
+		}
+		.img{
+		  text-align:center;
+		  float:left;
+			margin:10px;
+		}
+		
+		/*电视剧推荐样式*/
+		.tv-box{
+		  width:1210px;
+			height:569px;
+		}
+    .tv-box>hr{
+		  clear:both;
+		}
+		.tv-nav{
+		  width:1210px;
+		}
+		.tv-list li{
+		  float:left;
+		}
+		.tv-list{
+		  margin-left:10px;
+			list-style:none;
+		}
+		.tv-list li:first-child a{
+		  color:#1540F0;
+			font-size:20px;
+			text-decoration:none;
+			display:inline-block:
+		}
+		.tv-list li~li a{
+		  font-size:16px;
+			color:#1540F0;
+			text-decoration:none;
+			display:inline-block;
+			margin-left: 30px;
+			margin-top:5px;
+		}
+		/*电视推荐左侧样式*/
+		.tv-box-img{
+		  width:900px;
+			height:518px;
+			float:left;
+			clear:both;
+		}
+		.tv-box-img hr{
+		  margin-top:10px;
+		}
+		.tv .img p a{
+		  text-decoration:none;
+			color:#00f;
+		}
+		.tv img{
+		  width:160px;
+			height:200px;
+		}
+		/*电视剧推荐右侧样式*/
+		.tv-rank{
+		  width:300px;
+			height:518px;
+			float:left;
+			margin-top:-21px;
+		}
+		.tv-rank>a{
+		  color:#1540F0;
+			display:inline-block;
+			float:right;
+			text-decoration:none;
+		}
+		.tv-rank>span{
+			margin-left:10px;
+			margin-bottom:10px;	
+		}
+		.tv-rank hr{
+		  width:300px;
+		  margin-left:10px;
+			margin-top:10px;
+		}
+		.tv-rank>ul>li{
+		  width:300px;
+			height:43px;
+			color:#00f;
+			margin:0 20px;
+		}
+		
+		.tv-rank-list{
+		  list-style:none;
+		}
+		.tv-rank-list li span:first-child{
+			display:inline-block;
+		  width:20px;
+			height:20px;
+			background:#FF5200;
+			border:1px solid #1540F0;
+			border-radius:5px;
+			line-height:20px;
+			text-align:center;
+			color:#fff;
+			margin-right:20px;
+		}
+		.tv-rank-list a{
+		  color:#1540F0;
+			text-decoration:none;
+		}
+		.tv-rank-list span:last-child{
+		  display:inline-block;
+			float:right;
+			margin-right:20px;
+		}
+		.tv-rank-list li:nth-child(3)~li span:first-child{
+		  background:#fff;
+			color:#1540F0;
+
+		}
+		/*电影推荐样式*/
+		.film-box{
+		  width:1210px;
+			height:569px;
+		}
+    .film-box>hr{
+		  clear:both;
+		}
+		.film-nav{
+		  width:1210px;
+		}
+		.film-list li{
+		  float:left;
+		}
+		.film-list{
+		  margin-left:10px;
+			list-style:none;
+			float:left;
+		}
+		.film-list li:first-child a{
+		  color:#1540F0;
+			font-size:20px;
+			text-decoration:none;
+			display:inline-block:
+		}
+		.film-list li~li a{
+		  font-size:16px;
+			color:#1540F0;
+			text-decoration:none;
+			display:inline-block;
+			margin-left: 30px;
+			margin-top:5px;
+		}
+		/*电影推荐左侧样式*/
+		.film-box-img{
+		  width:900px;
+			height:518px;
+			float:left;
+			clear:both;
+		}
+		.film-box-img hr{
+		  margin-top:10px;
+		}
+		.film .img p a{
+		  text-decoration:none;
+			color:#00f;
+		}
+		.film img{
+		  width:160px;
+			height:200px;
+		}
+		/*电影推荐右侧样式*/
+		.film-rank{
+		  width:300px;
+			height:518px;
+			float:left;
+			margin-top:-21px;
+		}
+		.film-rank>a{
+		  color:#1540F0;
+			display:inline-block;
+			float:right;
+			text-decoration:none;
+		}
+		.film-rank>span{
+			margin-left:10px;
+			margin-bottom:10px;	
+		}
+		.film-rank hr{
+		  width:300px;
+		  margin-left:10px;
+			margin-top:10px;
+		}
+		.film-rank>ul>li{
+		  width:300px;
+			height:43px;
+			color:#00f;
+			margin:0 20px;
+		}
+		.film-rank-list{
+		  list-style:none;
+		}
+		.film-rank-list li span:first-child{
+			display:inline-block;
+		  width:20px;
+			height:20px;
+			background:#FF5200;
+			border:1px solid #1540F0;
+			border-radius:5px;
+			line-height:20px;
+			text-align:center;
+			color:#fff;
+			margin-right:20px;
+		}
+		.film-rank-list a{
+		  color:#1540F0;
+			text-decoration:none;
+		}
+		.film-rank-list span:last-child{
+		  display:inline-block;
+			float:right;
+			margin-right:20px;
+		}
+		.film-rank-list li:nth-child(3)~li span:first-child{
+		  background:#fff;
+			color:#1540F0;
+
+		}
+		
+		/*动漫推荐样式*/
+		.comic-box{
+		  width:1210px;
+			height:569px;
+		}
+    .comic-box>hr{
+		  clear:both;
+		}
+		.comic-nav{
+		  width:1210px;
+		}
+		.comic-list li{
+		  float:left;
+		}
+		.comic-list{
+		  width:900px;
+		  margin-left:10px;
+			list-style:none;
+			float:left;
+		}
+		.comic-list li:first-child a{
+		  color:#1540F0;
+			font-size:20px;
+			text-decoration:none;
+			display:inline-block:
+		}
+		.comic-list li~li a{
+		  font-size:16px;
+			color:#1540F0;
+			text-decoration:none;
+			display:inline-block;
+			margin-left: 30px;
+			margin-top:5px;
+		}
+		/*动漫推荐左侧样式*/
+		.comic-box-img{
+		  width:900px;
+			height:518px;
+			float:left;
+			clear:both;
+		}
+		.comic-box-img hr{
+		  margin-top:10px;
+		}
+		.comic .img p a{
+		  text-decoration:none;
+			color:#00f;
+		}
+		.comic img{
+		  width:160px;
+			height:200px;
+		}
+		/*动漫推荐右侧样式*/
+		.comic-rank{
+		  width:300px;
+			height:518px;
+			float:left;
+			margin-top:-21px;
+		}
+		.comic-rank>a{
+		  color:#1540F0;
+			display:inline-block;
+			float:right;
+			text-decoration:none;
+		}
+		.comic-rank>span{
+			margin-left:10px;
+			margin-bottom:10px;	
+		}
+		.comic-rank hr{
+		  width:300px;
+		  margin-left:10px;
+			margin-top:10px;
+		}
+		.comic-rank>ul>li{
+		  width:300px;
+			height:43px;
+			color:#00f;
+			margin:0 20px;
+		}
+		.comic-rank-list{
+		  list-style:none;
+		}
+		.comic-rank-list li span:first-child{
+			display:inline-block;
+		  width:20px;
+			height:20px;
+			background:#FF5200;
+			border:1px solid #1540F0;
+			border-radius:5px;
+			line-height:20px;
+			text-align:center;
+			color:#fff;
+			margin-right:20px;
+		}
+		.comic-rank-list a{
+		  color:#1540F0;
+			text-decoration:none;
+		}
+		.comic-rank-list span:last-child{
+		  display:inline-block;
+			float:right;
+			margin-right:20px;
+		}
+		.comic-rank-list li:nth-child(3)~li span:first-child{
+		  background:#fff;
+			color:#1540F0;
+		}
+		
+		/*综艺节目推荐样式*/
+		.variety-box{
+		  width:1210px;
+			height:569px;
+		}
+    .variety-box>hr{
+		  clear:both;
+		}
+		.variety-nav{
+		  width:1210px;
+		}
+		.variety-list li{
+		  float:left;
+		}
+		.variety-list{
+		  width:900px;
+		  margin-left:10px;
+			list-style:none;
+			float:left;
+		}
+		.variety-list li:first-child a{
+		  color:#1540F0;
+			font-size:20px;
+			text-decoration:none;
+			display:inline-block:
+		}
+		.variety-list li~li a{
+		  font-size:16px;
+			color:#1540F0;
+			text-decoration:none;
+			display:inline-block;
+			margin-left: 30px;
+			margin-top:5px;
+		}
+		/*综艺节目推荐左侧样式*/
+		.variety-box-img{
+		  width:900px;
+			height:518px;
+			float:left;
+			clear:both;
+		}
+		.variety-box-img hr{
+		  margin-top:10px;
+		}
+		.variety .img p a{
+		  text-decoration:none;
+			color:#00f;
+		}
+		.variety img{
+		  width:160px;
+			height:200px;
+		}
+		/*综艺节目推荐右侧样式*/
+		.variety-rank{
+		  width:300px;
+			height:518px;
+			float:left;
+			margin-top:-21px;
+		}
+		.variety-rank>a{
+		  color:#1540F0;
+			display:inline-block;
+			float:right;
+			text-decoration:none;
+		}
+		.variety-rank>span{
+			margin-left:10px;
+			margin-bottom:10px;	
+		}
+		.variety-rank hr{
+		  width:300px;
+		  margin-left:10px;
+			margin-top:10px;
+		}
+		.variety-rank>ul>li{
+		  width:300px;
+			height:43px;
+			color:#00f;
+			margin:0 20px;
+		}
+		.variety-rank-list{
+		  list-style:none;
+		}
+		.variety-rank-list li span:first-child{
+			display:inline-block;
+		  width:20px;
+			height:20px;
+			background:#FF5200;
+			border:1px solid #1540F0;
+			border-radius:5px;
+			line-height:20px;
+			text-align:center;
+			color:#fff;
+			margin-right:20px;
+		}
+		.variety-rank-list a{
+		  color:#1540F0;
+			text-decoration:none;
+		}
+		.variety-rank-list span:last-child{
+		  display:inline-block;
+			float:right;
+			margin-right:20px;
+		}
+		.variety-rank-list li:nth-child(3)~li span:first-child{
+		  background:#fff;
+			color:#1540F0;
+		}
+		.my-footer{
+		  width:100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+	<!--添加头部 	 -->
+	<iframe class="my-header" src="header.html" frameborder="0" scrolling="no"></iframe>
+	  <header>
+			<!--轮播图  -->
+		  <div class="carousel">
+			  <div class="carousel-img">
+			  <img src="../img/20.jpg" alt="">
+			</div>
+			<!--  轮播图右侧条目-->
+			<div class="carousel-item">
+				<ul>
+					<li>《三少爷的剑》徐克尔东升联手淬炼 何润东</li>
+					<li>《五女闹东京》发先导预告五"铁密"变身古惑仔</li>
+					<li>《怨灵地下室》今天上映民国背景融入</li>
+					<li>《喵星人》定档2017暑期斥资2亿打造</li>
+					<li>《游戏规则》发燃情版预告黄子韬开启</li>
+					<li>《游戏规则》发燃情版预告黄子韬开启</li>
+				</ul>
+			</div>
+			</div>
+	  </header>
+		<!--主体内容  -->
+	  <section>
+		  <h3>热播影视</h3>
+			<hr>
+			<div>
+			  <div class="hot-tv-img">
+					<a href="details.html"><img src="../imgs/hottv01.jpg" alt=""></a>
+					<p><a href="">流浪地球</a></p>
+				</div>
+			  <div class="hot-tv-img">
+					<a href="details.html"><img src="../imgs/hottv02.jpg" alt=""></a>
+					<p><a href="">大人物</a></p>
+				</div>
+			  <div class="hot-tv-img">
+					<a href="details.html"><img src="../imgs/hottv03.jpg" alt=""></a>
+					<p><a href="">绿皮书</a></p>
+				</div>
+			  <div class="hot-tv-img">
+					<a href="details.html"><img src="../imgs/hottv04.jpg" alt=""></a>
+					<p><a href="">推手</a></p>
+				</div>
+			  <div class="hot-tv-img">
+					<a href="details.html"><img src="../imgs/hottv05.jpg" alt=""></a>
+					<p><a href="">新喜剧之王</a></p>
+				</div>
+			  <div class="hot-tv-img">
+					<a href="details.html"><img src="../imgs/hottv06.jpg" alt=""></a>
+					<p><a href="">死侍2</a></p>
+				</div>
+				<div class="hot-tv-img">
+					<a href="details.html"><img src="../imgs/hottv07.jpg" alt=""></a>
+					<p><a href="">反贪风暴4</a></p>
+				</div>
+			  <div class="hot-tv-img">
+					<a href=""><img src="../imgs/hottv08.jpg" alt=""></a>
+					<p><a href="">一吻定情</a></p>
+				</div>
+			  <div class="hot-tv-img">
+					<a href="details.html"><img src="../imgs/hottv09.jpg" alt=""></a>
+					<p><a href="">夜空中最亮的星</a></p>
+				</div>
+			  <div class="hot-tv-img">
+					<a href="details.html"><img src="../imgs/hottv10.jpg" alt=""></a>
+					<p><a href="">封神演义</a></p>
+				</div>
+			  <div class="hot-tv-img">
+					<a href="details.html"><img src="../imgs/hottv11.jpg" alt=""></a>
+					<p><a href="">致我们温暖的小时光</a></p>
+				</div>
+			  <div class="hot-tv-img">
+					<a href="details.html"><img src="../imgs/hottv12.jpg" alt=""></a>
+					<p><a href="">铁探</a></p>
+				</div>
+			</div>
+			<div class="tv-item">
+			  <p>电视节目表<span>今日:2019-4-20 星期六</span></p>
+				<hr>
+				<div class="item">
+		      <dl>
+						<dt>
+							<a href="">
+								<img src="../img/tv01.gif" alt="">
+								<p>CCTV1综合</p>
+							</a>
+						</dt>
+						<dd>
+							<p>21:02 <a href="">淬火成钢25(首播)</a></p>
+							<p>22:00 <a href="">晚间新闻</a></p>
+							<p>22:36 <a href="">淬火成钢26（首播）</a></p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<a href="">
+								<img src="../img/tv01.gif" alt="">
+								<p>CCTV1综合</p>
+							</a>
+						</dt>
+						<dd>
+							<p>21:15 <a href="">经济半小时（20161227）</a></p>
+							<p>21:47 <a href="">中国福利彩票公益开奖</a></p>
+							<p>21:50 <a href="">央视财经评论(20161227)</a></p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<a href="">
+								<img src="../img/tv01.gif" alt="">
+								<p>CCTV1综合</p>
+							</a>
+						</dt>
+						<dd>
+							<p>19:30 <a href="">黄金赛场—2016/2017赛季</a></p>
+							<p>21:30 <a href="">体育世界</a></p>
+							<p>22:15 <a href="">体育人间</a></p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<a href="">
+								<img src="../img/tv04.gif" alt="">
+								<p>CCTV1综合</p>
+							</a>
+						</dt>
+						<dd>
+							<p>20:51 <a href="">金鹰独播剧场：放弃我抓紧我</a></p>
+							<p>21:44 <a href="">广告</a></p>
+							<p>22:00 <a href="">钻石独播剧场：兰陵王妃 3</a></p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<a href="">
+								<img src="../img/tv05.gif" alt="">
+								<p>CCTV1综合</p>
+							</a>
+						</dt>
+						<dd>
+							<p>21:20 <a href="">芝麻开门（20161227）</a></p>
+							<p>22:32 <a href="">芝麻开门（20161227）</a></p>
+							<p>23:41 <a href="">时代问答</a></p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<a href="">
+								<img src="../img/tv06.jpg" alt="">
+								<p>CCTV1综合</p>
+							</a>
+						</dt>
+						<dd>
+							<p>21:20 <a href="">芝麻开门（20161227）</a></p>
+							<p>22:32 <a href="">芝麻开门（20161227）</a></p>
+							<p>23:41 <a href="">时代问答</a></p>
+						</dd>
+					</dl>
+					<dl>
+					<dt>
+						<a href="">
+							<img src="../img/tv07.gif" alt="">
+							<p>CCTV1综合</p>
+						</a>
+					</dt>
+					<dd>
+						<p>21:20 <a href="">芝麻开门（20161227）</a></p>
+						<p>22:32 <a href="">芝麻开门（20161227）</a></p>
+						<p>23:41 <a href="">时代问答</a></p>
+					</dd>
+					</dl>
+					<dl>
+						<dt>
+							<a href="">
+								<img src="../img/tv08.gif" alt="">
+								<p>CCTV1综合</p>
+							</a>
+						</dt>
+						<dd>
+							<p>21:20 <a href="">芝麻开门（20161227）</a></p>
+							<p>22:32 <a href="">芝麻开门（20161227）</a></p>
+							<p>23:41 <a href="">时代问答</a></p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<a href="">
+								<img src="../img/tv09.gif" alt="">
+								<p>CCTV1综合</p>
+							</a>
+						</dt>
+						<dd>
+							<p>21:20 <a href="">芝麻开门（20161227）</a></p>
+							<p>22:32 <a href="">芝麻开门（20161227）</a></p>
+							<p>23:41 <a href="">时代问答</a></p>
+						</dd>
+					</dl>
+					<dl>
+					<dt>
+						<a href="">
+							<img src="../img/tv10.gif" alt="">
+							<p>CCTV1综合</p>
+						</a>
+					</dt>
+					<dd>
+						<p>21:20 <a href="">芝麻开门（20161227）</a></p>
+						<p>22:32 <a href="">芝麻开门（20161227）</a></p>
+						<p>23:41 <a href="">时代问答</a></p>
+					</dd>
+					</dl>
+					<dl>
+						<dt>
+							<a href="">
+								<img src="../img/tv11.gif" alt="">
+								<p>CCTV1综合</p>
+							</a>
+						</dt>
+						<dd>
+							<p>21:20 <a href="">芝麻开门（20161227）</a></p>
+							<p>22:32 <a href="">芝麻开门（20161227）</a></p>
+							<p>23:41 <a href="">时代问答</a></p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<a href="">
+								<img src="../img/tv12.jpg" alt="">
+								<p>CCTV1综合</p>
+							</a>
+						</dt>
+						<dd>
+							<p>21:20 <a href="">芝麻开门（20161227）</a></p>
+							<p>22:32 <a href="">芝麻开门（20161227）</a></p>
+							<p>23:41 <a href="">时代问答</a></p>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="tv-box">
+			  <div class="tv-nav">
+				  <ul class="tv-list">
+						<li><a href="">电视剧</a></li>
+						<li><a href="">推荐</a></li>
+						<li><a href="">电视台热播</a></li>
+						<li><a href="">即将播出</a></li>
+						<li><a href="">新入库</a></li>
+			    </ul>
+				</div>
+			  <div class="tv-box-img">
+					<hr>
+					<div class="tv">
+						<div class="img">
+						<a href=""><img src="../imgs/tv01.jpg" alt=""></a>
+						<p><a href="">倚天屠龙记</a></p>
+					</div>
+						<div class="img">
+						<a href=""><img src="../imgs/tv02.jpg" alt=""></a>
+						<p><a href="">都挺好</a></p>
+					</div>
+						<div class="img">
+						<a href=""><img src="../imgs/tv03.jpg" alt=""></a>
+						<p><a href="">新白娘子传奇</a></p>
+					</div>
+						<div class="img">
+						<a href=""><img src="../imgs/tv04.jpg" alt=""></a>
+						<p><a href="">青春斗</a></p>
+					</div>
+						<div class="img">
+						<a href=""><img src="../imgs/tv05.jpg" alt=""></a>
+						<p><a href="">东宫</a></p>
+					</div>
+					</div>
+					<div class="tv">
+						<div class="img">
+						<a href=""><img src="../imgs/tv06.jpg" alt=""></a>
+						<p><a href="">只为遇见你</a></p>
+					</div>
+						<div class="img">
+						<a href=""><img src="../imgs/tv07.jpg" alt=""></a>
+						<p><a href="">爱上北斗星男友</a></p>
+					</div>
+						<div class="img">
+						<a href=""><img src="../imgs/hottv04.jpg" alt=""></a>
+						<p><a href="">推手</a></p>
+					</div>
+						<div class="img">
+						<a href=""><img src="../imgs/hottv10.jpg" alt=""></a>
+						<p><a href="">封神演义</a></p>
+					</div>
+						<div class="img">
+						<a href=""><img src="../imgs/hottv09.jpg" alt=""></a>
+						<p><a href="">夜空中最亮的星</a></p>
+					</div>
+        </div>
+				</div>
+			  <div class="tv-rank">
+				<span>电视剧排行榜</span>
+				<a href="">更多>></a>
+				<hr>
+				  <ul class="tv-rank-list">
+					  <li><a href=""><span>1</span>蓝色大海的传说<span>更新至13集</span></a></li>
+					  <li><a href=""><span>2</span>极品家丁<span>更新至13集</span></a></li>
+					  <li><a href=""><span>3</span>锦绣未央<span>更新至13集</span></a></li>
+					  <li><a href=""><span>4</span>青云志2<span>更新至13集</span></a></li>
+						<li><a href=""><span>5</span>举重妖精金福珠<span>更新至13集</span></a></li>
+						<li><a href=""><span>6</span>我的岳父会武术<span>更新至13集</span></a></li>
+						<li><a href=""><span>7</span>嫉妒的化身<span>更新至13集</span></a></li>
+						<li><a href=""><span>8</span>西部世界第一季<span>更新至13集</span></a></li>
+						<li><a href=""><span>9</span>微能力者<span>更新至13集</span></a></li>
+						<li><a href=""><span>10</span>七次的初吻<span>更新至13集</span></a></li>
+						<li><a href=""><span>11</span>浪漫医生金师傅<span>更新至13集</span></a></li>
+					</ul>
+					
+				</div>
+			</div>
+			<div class="film-box">
+			  <div class="film-nav">
+					<ul class="film-list">
+						<li><a href="">电影</a></li>
+						<li><a href="">推荐</a></li>
+						<li><a href="">电影院热播</a></li>
+						<li><a href="">即将播出</a></li>
+						<li><a href="">新入库</a></li>
+			    </ul>	
+				</div>
+				<div class="film-box-img">
+				<hr>
+				  <div class="film">
+						<div class="img">
+							<a href=""><img src="../imgs/film01.jpg" alt=""></a>
+							<p><a href="">飞驰人生</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/film02.jpg" alt=""></a>
+							<p><a href="">疯狂的外星人</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/film03.jpg" alt=""></a>
+							<p><a href="">惊奇队长</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/film04.jpg" alt=""></a>
+							<p><a href="">四大名捕之食人梦界</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/film05.jpg" alt=""></a>
+							<p><a href="">兴风作浪</a></p>
+						</div>
+					</div>
+					<div class="film">
+						<div class="img">
+							<a href=""><img src="../imgs/film06.jpg" alt=""></a>
+							<p><a href="">白蛇缘起</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/film07.jpg" alt=""></a>
+							<p><a href="">蓝色生死恋</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/hottv01.jpg" alt=""></a>
+							<p><a href="">流浪地球</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/hottv02.jpg" alt=""></a>
+							<p><a href="">大人物</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/hottv05.jpg" alt=""></a>
+							<p><a href="">新喜剧之王</a></p>
+						</div>
+					</div>
+				</div>
+			  <div class="film-rank">
+				<span>电影排行榜</span>
+				<a href="">更多>></a>
+				<hr>
+				  <ul class="film-rank-list">
+					  <li><a href=""><span>1</span>蓝色大海的传说<span>更新至13集</span></a></li>
+					  <li><a href=""><span>2</span>极品家丁<span>更新至13集</span></a></li>
+					  <li><a href=""><span>3</span>锦绣未央<span>更新至13集</span></a></li>
+					  <li><a href=""><span>4</span>青云志2<span>更新至13集</span></a></li>
+						<li><a href=""><span>5</span>举重妖精金福珠<span>更新至13集</span></a></li>
+						<li><a href=""><span>6</span>我的岳父会武术<span>更新至13集</span></a></li>
+						<li><a href=""><span>7</span>嫉妒的化身<span>更新至13集</span></a></li>
+						<li><a href=""><span>8</span>西部世界第一季<span>更新至13集</span></a></li>
+						<li><a href=""><span>9</span>微能力者<span>更新至13集</span></a></li>
+						<li><a href=""><span>10</span>七次的初吻<span>更新至13集</span></a></li>
+						<li><a href=""><span>11</span>浪漫医生金师傅<span>更新至13集</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="comic-box">
+			  <div class="comic-nav">
+					<ul class="comic-list">
+						<li><a href="">动漫</a></li>
+						<li><a href="">推荐</a></li>
+						<li><a href="">新入库</a></li>
+			    </ul>	
+				</div>
+				<div class="comic-box-img">
+				<hr>
+				  <div class="comic">
+						<div class="img">
+							<a href=""><img src="../imgs/comic01.jpg" alt=""></a>
+							<p><a href="">万界神主</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/comic02.jpg" alt=""></a>
+							<p><a href="">奥特英雄新生代英雄传</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/comic03.jpg" alt=""></a>
+							<p><a href="">万古仙穹</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/comic04.jpg" alt=""></a>
+							<p><a href="">巨兵长城</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/comic05.jpg" alt=""></a>
+							<p><a href="">天行九歌</a></p>
+						</div>
+        </div>
+					<div class="comic">
+						<div class="img">
+							<a href=""><img src="../imgs/comic06.jpg" alt=""></a>
+							<p><a href="">斗破苍穹</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/comic07.jpg" alt=""></a>
+							<p><a href="">名人传</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/comic08.jpg" alt=""></a>
+							<p><a href="">海贼王</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/comic09.jpg" alt=""></a>
+							<p><a href="">全职高手</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/comic10.jpg" alt=""></a>
+							<p><a href="">美食总动员</a></p>
+						</div>
+					</div>
+				</div>
+			  <div class="comic-rank">
+				  <span>动漫排行榜</span>
+				  <a href="">更多>></a>
+				  <hr>
+				  <ul class="comic-rank-list">
+					  <li><a href=""><span>1</span>神偷奶爸2<span>更新至13集</span></a></li>
+					  <li><a href=""><span>2</span>机器人总动员<span>更新至13集</span></a></li>
+					  <li><a href=""><span>3</span>浪客剑心<span>更新至13集</span></a></li>
+					  <li><a href=""><span>4</span>猪猪侠<span>更新至13集</span></a></li>
+						<li><a href=""><span>5</span>你的名字<span>更新至13集</span></a></li>
+						<li><a href=""><span>6</span>倒霉熊第二部<span>更新至13集</span></a></li>
+						<li><a href=""><span>7</span>银魂<span>更新至13集</span></a></li>
+						<li><a href=""><span>8</span>疯狂动物城<span>更新至13集</span></a></li>
+						<li><a href=""><span>9</span>盖娜<span>更新至13集</span></a></li>
+						<li><a href=""><span>10</span>美少女战士真人版<span>更新至13集</span></a></li>
+						<li><a href=""><span>11</span>头脑特工队<span>更新至13集</span></a></li>
+					</ul>
+				  
+				</div>
+			</div>
+			<div class="variety-box">
+			  <div class="variety-nav">
+					<ul class="variety-list">
+						<li><a href="">综艺节目</a></li>
+						<li><a href="">推荐</a></li>
+						<li><a href="">今日热播</a></li>
+						<li><a href="">新入库</a></li>
+			    </ul>
+				</div>
+				<div class="variety-box-img">
+				<hr>
+				  <div class="variety">
+						<div class="img">
+							<a href=""><img src="../imgs/variety01.jpg" alt=""></a>
+							<p><a href="">明日之子</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/variety02.jpg" alt=""></a>
+							<p><a href="">快乐大本营</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/variety03.jpg" alt=""></a>
+							<p><a href="">妻子的浪漫旅行</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/variety04.jpg" alt=""></a>
+							<p><a href="">王牌对王牌第四季</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/variety05.jpg" alt=""></a>
+							<p><a href="">等着我</a></p>
+						</div>
+          </div>
+					<div class="variety">
+						<div class="img">
+							<a href=""><img src="../imgs/variety06.jpg" alt=""></a>
+							<p><a href="">经典传奇</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/variety07.jpg" alt=""></a>
+							<p><a href="">身临其境第二部</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/variety08.jpg" alt=""></a>
+							<p><a href="">最强大脑</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/variety09.jpg" alt=""></a>
+							<p><a href="">欢乐喜剧人</a></p>
+						</div>
+						<div class="img">
+							<a href=""><img src="../imgs/variety10.jpg" alt=""></a>
+							<p><a href="">变形记第二十七季</a></p>
+						</div>
+					</div>
+				</div>
+			  <div class="variety-rank">
+				  <span>综艺节目排行榜</span>
+				  <a href="">更多>></a>
+				  <hr>
+					<ul class="tv-rank-list">
+					  <li><a href=""><span>1</span>缘来非诚勿扰<span>更新至13集</span></a></li>
+					  <li><a href=""><span>2</span>天天向上<span>更新至13集</span></a></li>
+					  <li><a href=""><span>3</span>快乐大本营<span>更新至13集</span></a></li>
+					  <li><a href=""><span>4</span>金星秀<span>更新至13集</span></a></li>
+						<li><a href=""><span>5</span>武林风<span>更新至13集</span></a></li>
+						<li><a href=""><span>6</span>鲁豫有约<span>更新至13集</span></a></li>
+						<li><a href=""><span>7</span>军情观察室<span>更新至13集</span></a></li>
+						<li><a href=""><span>8</span>徐老师来巡山<span>更新至13集</span></a></li>
+						<li><a href=""><span>9</span>我们结婚了<span>更新至13集</span></a></li>
+						<li><a href=""><span>10</span>非你莫属<span>更新至13集</span></a></li>
+						<li><a href=""><span>11</span>军情解码<span>更新至13集</span></a></li>
+					</ul>
+				</div>
+			</div>
+	  </section>
+	</div>
+<!--底部  -->
+	<iframe class="my-footer" src="footer.html" frameborder="0" scrolling="no"></iframe>
+</body>
+</html>
+
+
