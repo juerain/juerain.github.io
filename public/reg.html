@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	  *{
+		  margin:0;
+			padding:0;
+		}
+		#title{
+		  width:1210px;
+			height:74px;
+			margin:0 auto;
+		}
+		#title span{
+		  display:block;
+		  color:#00f;
+			font-size:40px;
+			margin-top:10px;
+			float:left;
+		  margin:15px 3px;
+		}
+	  section{
+		  width:100%;
+		}
+		#reg{
+			width:1210px;
+			height:510px;
+			background-image:url("../imgs/reg.jpg");
+			margin:0 auto;
+		}
+		#reg-page{
+		  width:800px;
+			height:500px;
+			background:rgba(200,200,200,0.8);
+			margin:0 auto;
+			margin-top:5px;
+			text-align:center;
+			position:relative;
+		}
+		#reg-page h1{
+		  margin-top:30px;
+		}
+		#reg-page div{
+		  margin:20px;
+			width:738px;
+			text-align:center;
+			margin-top:30px;
+		}
+		[type="text"],[type="password"]{
+		  width:250px;
+			height:30px;
+			float:left;
+		}
+		#checkbox{
+		  clear:both;
+		}
+		label {
+		  display:inline-block;
+			float:left;
+			margin-left:80px;
+		}
+		button{
+		  width:200px;
+			height:40px;
+			color:#fff;
+			background:#04cc00;
+			font-size:20px;
+			font-weight:bold;
+			border-radius:10px;
+			border:0;
+		}
+		a{
+		  text-decoration:none;
+			position:absolute;
+			bottom:10px;
+			right:10px;
+		}
+		
+		#footer-box{
+		  width:1210px;
+			margin:0 auto;
+			text-align:center;
+		}
+
+		#footer>li{
+		  list-style:none;
+			display:inline-block;
+			border-right:1px solid #000;
+			margin-left:8px;
+			padding-right:10px;
+			color:#000 !important;
+		}
+		#footer li:last-child{
+		  border-right:none;
+		}
+		#footer~p{
+		  font-size:14px;
+			margin:0;
+		}
+		#footer-p{
+		  clear:both;
+		}
+
+	</style>
+	
+</head>
+<body>
+	<div id="box">
+	  <header>
+			<div id="title">
+			  <span>电</span><span>影</span><span>网</span>
+			</div>
+		</header>
+		<section>
+			<div id="reg">
+			<table></table>
+			  <div id="reg-page">
+				<table></table>
+				  <h1>用户注册</h1>
+				  <div><label for="">用户名：</label><input type="text" >
+						<p>支持字母、数字和“_”,4-20个字符</p>
+					</div>
+				  <div><label for="">密码：</label><input type="password" >
+						支持字母、数字和“_”,6-20个字符
+					</div>
+				  <div><label for="">确认密码：</label><input type="password" >请再次输入一遍密码</div>
+					<div><label for="">手机：</label><input type="text">
+						请输入联系电话
+					</div>
+					<div><label for="">验证码：</label><input type="text"></div>
+					<div id="checkbox"><input type="checkbox">同意用户协议和版权声明</div>
+					<button>注册</button>
+					<a href="index.html">返回首页</a>
+				</div>
+			</div>
+		</section>
+		<footer>
+		  <div id="footer-box">
+			<ul id="footer">
+				<li>关于我</li>
+				<li>联系我</li>
+				<li>商家入驻</li>
+				<li>友情链接</li>
+			</ul>
+			<p id="footer-p">互联网出版许可证编号新出网证(京)字000号|出版物经营许可证|网络文化经营许可证京网文[2017]0000-000号|违法和不良信息举报电话：123456789</p>
+			<p>Copyright © 2017 我的电影网 版权所有|消费者维权热线：12345</p>
+			</div>
+			
+		</footer>
+	</div>
+</body>
+</html>

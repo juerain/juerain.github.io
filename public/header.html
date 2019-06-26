@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	  *{margin:0;padding:0;}
+		#head{
+		  width:1200px;
+			margin:0 auto;
+		}
+		#logo>span{
+		  display:block;
+		  color:#00f;
+			font-size:40px;
+			margin-top:10px;
+			float:left;
+		  margin:15px 3px;
+		}
+		#head ul{
+		  list-style:none;
+      margin-top:10px;
+		}
+		#head .reg-list{
+     float:right;
+		}
+		.reg-list li{
+		  float:left;
+			margin-right:5px;
+		}
+		.reg-list li:first-child a,.reg-list li:nth-child(2) a{
+		  color:#f00;
+		}
+		.reg-list li a,.family ul li a{
+		  text-decoration:none;
+			font-size:14px;
+		}
+		.reg-list li a:hover{
+		  color:#f00;
+		}
+		#head input{
+		  margin:10px 0 0 350px;
+			width:400px;height:30px;
+			border:1px solid #04AFF5;
+			border-radius:5px;
+			padding:0px 20px;
+		}
+		#head .search{
+		  display:inline-block;
+			width:50px;
+			height:32px;
+			background:#F5F5F5;
+			border:1px solid #ddd;
+			text-align:center;
+			line-height:32px;
+			text-decoration:none;
+			border-radius:5px;
+			margin:0 10px;
+			font-size:14px;
+		}
+		#head .search+a{
+			width:98px;
+			color:#0D519C;
+			border:1px solid #2E8EDB;
+		}
+		.nav{
+		  width:1200px;
+		  height:40px;
+			background:#4b6cf3;
+			margin-top:10px;
+		}
+		.nav ul li{
+		  list-style:none;
+		  float:left;
+			margin:8px 20px;
+			font-size:20px;
+		}
+		.nav ul li a{
+		  color:#fff;
+			text-decoration:none;
+		}
+		.family{
+		  width:1200px;
+		  height:10px;
+		}
+		.family>ul{
+		  clear:both;
+		}
+		.family ul li{
+		  list-style:none;
+		  margin:8px 8px;
+			color:#000;
+			font-size:15px;
+			float:left;
+  	}
+		.family>ul>li:first-child a{
+		  color:#1540F0;
+		}
+		.family>ul>li:nth-child(11) a{
+		  margin-left:100px;
+			color:#1540F0;
+		}
+	</style>
+</head>
+<body>
+	<header id="head">
+		<div id="logo">
+			<span>电</span><span>影</span><span>网</span>
+			<ul class="reg-list">
+				<li><a href="">请登录</a></li>
+				<li><a href="">注册</a></li>
+				<li><img src="../imgs/tog_01.jpg" alt=""><a href="">放入桌面</a></li>
+				<li><img src="../imgs/tog_02.jpg" alt=""><a href="">加入收藏</a></li>
+				<li><img src="../imgs/tog_03.jpg" alt=""><a href="">留言/求片</a></li>
+				<li><img src="../imgs/tog_04.jpg" alt=""><a href="">关注微博</a></li>
+			</ul>
+			<input type="text" placeholder="请输入影片名或演员名">
+			<a href="#" class="search">搜索</a>
+			<a href="#" class="search"><img src="../imgs/record.jpg" alt=""><span>播放记录</span></a>
+		</div>
+		<div class="nav">
+			 <ul>
+			  <li><a href="">首页</a></li>
+			  <li><a href="">影讯</a></li>
+			  <li><a href="">今日影视</a></li>
+			  <li><a href="">电影票房</a></li>
+			  <li><a href="">电视剧</a></li>
+			  <li><a href="film.html">电影</a></li>
+			  <li><a href="">微电影</a></li>
+			  <li><a href="">动漫</a></li>
+			  <li><a href="">综艺节目</a></li>
+			</ul>
+		</div>
+		<table></table>
+		<div class="family">
+			<ul class="family-ul">
+				<li><a href="">电视剧：</a></li>
+				<li><a href="">国产 |</a></li>
+				<li><a href="">韩剧 |</a></li>
+				<li><a href="">美剧 |</a></li>
+				<li><a href="">英剧 |</a></li>
+				<li><a href="">港剧 |</a></li>
+				<li><a href="">台剧 |</a></li>
+				<li><a href="">日剧 |</a></li>
+				<li><a href="">泰剧 |</a></li>
+				<li><a href="">海外 |</a></li>
+			  <li><a href="">电影：</a></li>
+				<li><a href="">喜剧片 |</a></li>
+				<li><a href="">爱情片 |</a></li>
+				<li><a href="">科幻片 |</a></li>
+				<li><a href="">恐怖片 |</a></li>
+				<li><a href="">战争片 |</a></li>
+				<li><a href="">剧情片 |</a></li>
+			</ul>
+		</div>
+	</header>
+</body>
+</html>

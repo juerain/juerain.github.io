@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*清除所有元素的内外边距*/
+	  *{margin:0;padding:0;}
+		.my-header{
+		  width:100%;
+			height:165px;
+		}
+		/*设置最外层div的宽度，内容水平居中*/
+		.box{
+		  width:1210px;
+			margin:0 auto;
+		}
+		.box ul{
+		  list-style:none;
+      margin-top:10px;
+		}
+
+		.box ul li{
+		  float:left;
+			margin-right:5px;
+		}
+		.box p{
+		  clear:both;
+			margin:10px 10px;
+			font-size:17px;
+			color:#666;
+		}
+		
+		
+		#nav{
+		  height:40px;
+			background:#4B6CF3;
+			margin-top:10px;
+		}
+		#nav ul,#item ul,{
+		  float:left;
+    }
+		#nav ul li{
+		  font-size:18px;
+			color:#fff !important;
+			margin:0 20px;
+			line-height:40px;
+		}
+		#item ul li,#item ul li:nth-child(2){
+		  border-left:2px solid #666;
+			margin-right:10px;
+			padding-left:10px;
+			font-size:14px;
+			color:#666;
+		}
+		#item ul li:first-child,#item ul li:nth-child(2),#item ul li:nth-child(11),#item ul li:nth-child(12){
+		  border-left:none;
+		}
+		#item ul li:first-child,#item ul li:nth-child(11){
+		  color:#1540F0;
+		}
+		#item ul li:nth-child(11){
+		  margin-left:70px;
+		}
+		#item{
+		  margin-bottom:40px;
+		}
+		#item ul{
+		  margin-bottom:10px;
+		}
+		/*热播影视的样式*/
+		.hot-tv-img{
+		  width:1210px;
+      display:flex;
+			flex-wrap:wrap;
+			justify-content:space-around;
+		}
+		.hot-tv-img div{
+			margin:10px;
+			text-align:center;
+		}
+		.hot-tv-img div:first-child,.hot-tv-img div:nth-child(2),.hot-tv-img div:nth-child(3),.hot-tv-imgdiv:nth-child(4)
+		,.hot-tv-img div:nth-child(5),.hot-tv-img div:nth-child(6),.hot-tv-img div:nth-child(7),.hot-tv-img div:nth-child(8),.hot-tv-img div:nth-child(9),.hot-tv-img div:nth-child(10),.hot-tv-img div:nth-child(11),.hot-tv-img div:nth-child(12){
+		  width:180px;height:292px;
+		}
+		.hot-tv-img img{
+		  width:180px;height:252px;
+		}
+		.hot-tv-img p a{
+		  color:#1540F0;
+			font-size:14px;
+			text-decoration:none;
+		}
+		/*二楼左侧样式*/
+		.tv-item-box{
+		  width:800px;
+			height:1540px;
+			float:left;
+		}
+		.tv-item{
+		  width:800px;
+			float:left;
+		}
+		.tv-item ul{
+		  float:left;
+		}
+		.tv-item ul li{
+		  margin:0 10px;
+		}
+		.tv-item ul li a{
+		  color:#1540F0;
+			font-size:16px;
+			text-decoration:none;
+		}
+		.tv-item ul li p{
+		  margin-top:-1px;
+		}
+		.tv-item ul li .total{
+		  display:block;
+			width:48px;
+			height:29px;
+			background:#1540F0;
+			color:#fff;
+			border-radius:5px;
+			text-align:center;
+			line-height:29px;
+		}
+		.tv{
+		  float:left !important;
+			margin-bottom:10px;
+		}
+		.tv>li>a{
+		  color:#333333 !important;
+		}
+		.tv li{
+		  color:#333333 !important;
+			font-size:16px !important;
+		}
+		.tv+hr{
+		  clear:both;
+		}
+		/*二楼左侧下部样式*/
+		.tv-img{
+		  width:800px;
+			display:flex;
+			flex-wrap:wrap;
+			justify-content:space-between;
+		}
+		.tv-img>div{
+		  width:400px;
+			height:190px;
+			border-bottom:1px dotted #666;
+			margin-bottom:10px;
+		}
+		.tv-img div img{
+		  width:140px;
+			height:180px;
+		}
+		.tv-img .tv-p{
+		  width:190px;
+			height:180px;
+			float:right;
+			margin:0 55px 0 0;
+		}
+		.tv-img .tv-p p{
+		  font-size:15px;
+			color:#333333;
+		}
+		.tv-img .tv-p h4{
+		  margin:10px 0 0 10px;
+		}
+		.tv-p h4 a{
+		  text-decoration:none;
+		}
+		.tv-nav{
+		  width:400px;
+			height:600px;
+			float:left;
+			margin-left:5px;
+		}
+		.tv-nav hr{
+		  margin-top:-1px;
+		}
+    .tv-nav h4{
+		  width:370px;
+			height:25px;
+			background-image:linear-gradient(to bottom,#fff,#ddd);
+			line-height:25px;
+      padding-left:30px;
+			margin-bottom:15px;
+		}
+		.tv-nav h4 a{
+		  text-decoration:none;
+		}
+		/*二楼右侧样式*/
+		.page-selection{
+		  float:left;
+			width:1210px;
+			margin-bottom:10px;
+		}
+		.page-selection ul{
+		  margin:50px 300px;;
+		}
+		.page-selection ul li a{
+		  display:block;
+			height:31px;
+			font-size:14px;
+			border:1px solid #000;
+			border-radius:5px;
+			text-align:center;
+			line-height:31px;
+			text-decoration:none;
+			margin:0 5px;
+		}
+		.page-selection ul li .home-page,.page-selection ul li .end-page{
+		  width:54px;
+		}
+		.page-selection ul li .prev,.page-selection ul li .next{
+			width:68px;
+	  }
+    [class="a"]{
+		  width:34px;
+		}
+		.my-footer{
+		  width:100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<iframe class="my-header" src="header.html" frameborder="0" scrolling="no"></iframe>
+	  <header>
+			<!--一楼内容  -->
+			<p>热播影视</p>
+			<hr>
+		</header>
+		<section>
+		  <div class="hot-tv-img">
+		  	<div class="img">
+					<a href=""><img src="../imgs/tv01.jpg" alt=""></a>
+					<p><a href="">倚天屠龙记</a></p>
+				</div>
+			  <div class="img">
+					<a href=""><img src="../imgs/film01.jpg" alt=""></a>
+					<p><a href="">飞驰人生</a></p>
+				</div>
+			  <div class="img">
+					<a href=""><img src="../imgs/tv02.jpg" alt=""></a>
+					<p><a href="">都挺好</a></p>
+				</div>
+			  <div class="img">
+					<a href=""><img src="../imgs/film02.jpg" alt=""></a>
+					<p><a href="">疯狂的外星人</a></p>
+				</div>
+			  <div class="img">
+					<a href=""><img src="../imgs/film03.jpg" alt=""></a>
+					<p><a href="">惊奇队长</a></p>
+				</div>
+			  <div class="img">
+					<a href=""><img src="../imgs/tv03.jpg" alt=""></a>
+					<p><a href="">新白娘子传奇</a></p>
+				</div>
+				<div class="img">
+					<a href=""><img src="../imgs/film04.jpg" alt=""></a>
+					<p><a href="">四大名捕之食人梦界</a></p>
+				</div>
+			  <div class="img">
+					<a href=""><img src="../imgs/film05.jpg" alt=""></a>
+					<p><a href="">兴风作浪</a></p>
+				</div>
+			  <div class="img">
+					<a href=""><img src="../imgs/tv04.jpg" alt=""></a>
+					<p><a href="">青春斗</a></p>
+				</div>
+			  <div class="img">
+					<a href=""><img src="../imgs/film06.jpg" alt=""></a>
+					<p><a href="">白蛇缘起</a></p>
+				</div>
+			  <div class="img">
+					<a href=""><img src="../imgs/tv05.jpg" alt=""></a>
+					<p><a href="">东宫</a></p>
+				</div>
+			  <div class="img">
+					<a href=""><img src="../imgs/film07.jpg" alt=""></a>
+					<p><a href="">蓝色生死恋</a></p>
+				</div>
+		  </div>
+			<!--二楼内容  -->
+			<div class="tv-item-box">
+			  <div class="tv-item">
+			  <ul class="tv">
+				<li><a href="">电视剧</a></li>
+				<li><a href="">电影</a></li>
+			</ul>
+			<hr>
+			  <ul>
+			  	<li><p>地区:</p></li>
+					<li><a href="" class="total">全部</a></li>
+					<li><a href="">国产</a></li>
+					<li><a href="">韩国</a></li>
+					<li><a href="">美国</a></li>
+					<li><a href="">香港</a></li>
+					<li><a href="">台湾</a></li>
+					<li><a href="">日本</a></li>
+					<li><a href="">英国</a></li>
+					<li><a href="">泰国</a></li>
+					<li><a href="">海外</a></li>
+			  </ul>
+				<ul>
+			  	<li><p>分类:</p></li>
+					<li><a href="" class="total">全部</a></li>
+					<li><a href="">动作片</a></li>
+					<li><a href="">喜剧片</a></li>
+					<li><a href="">爱情片</a></li>
+					<li><a href="">科幻片</a></li>
+					<li><a href="">恐怖片</a></li>
+					<li><a href="">战争片</a></li>
+					<li><a href="">剧情片</a></li>
+			  </ul>
+				<ul>
+			  	<li><p>年份:</p></li>
+					<li><a href="" class="total">全部</a></li>
+					<li><a href="">2017</a></li>
+					<li><a href="">2016</a></li>
+					<li><a href="">2015</a></li>
+					<li><a href="">2014</a></li>
+					<li><a href="">2013</a></li>
+					<li><a href="">2012</a></li>
+					<li><a href="">2010</a></li>
+					<li><a href="">2009</a></li>
+					<li><a href="">2008</a></li>
+			  </ul>
+			</div>
+			
+			<div class="tv-img">
+			  <div><a href=""><img src="../imgs/film01.jpg" alt=""></a>
+				  <div class="tv-p">
+					  <h4><a href="">飞驰人生</a></h4>
+					  <p>主演：沈腾 尹正</p>
+						<p>类型：喜剧</p>
+						<p>地区：大陆</p>
+						<p>上映：2018年</p>
+					</div>
+				</div>
+			  <div><a href=""><img src="../imgs/film02.jpg" alt=""></a>
+				  <div class="tv-p">
+					  <h4><a href="">疯狂的外星人</a></h4>
+					  <p>主演：黄渤沈腾</p>
+						<p>类型：喜剧</p>
+						<p>地区：大陆</p>
+						<p>上映：2018年</p>
+					</div>
+				</div>
+			  <div><a href=""><img src="../imgs/film03.jpg" alt=""></a>
+				  <div class="tv-p">
+					  <h4><a href="">惊奇队长</a></h4>
+					  <p>主演：布丽·拉尔森裘德·洛</p>
+						<p>类型：科幻</p>
+						<p>地区：美国</p>
+						<p>上映：2017年</p>
+					</div>
+				</div>
+			  <div><a href=""><img src="../imgs/film04.jpg" alt=""></a>
+					<div class="tv-p">
+					  <h4><a href="">四大名捕之食人梦界</a></h4>
+					  <p>主演：陈子由刘林城</p>
+						<p>类型：科幻</p>
+						<p>地区：大陆</p>
+						<p>上映：2017年</p>
+					</div>			
+				</div>
+			  <div><a href=""><img src="../imgs/film05.jpg" alt=""></a>
+				  <div class="tv-p">
+					  <h4><a href="">兴风作浪</a></h4>
+					  <p>主演：宋晓峰关婷娜</p>
+						<p>类型：喜剧</p>
+						<p>地区：大陆</p>
+						<p>上映：2017年</p>
+					</div>
+				</div>
+			  <div><a href=""><img src="../imgs/film06.jpg" alt=""></a>
+				  <div class="tv-p">
+					  <h4><a href="">白蛇缘起</a></h4>
+					  <p>主演：张喆杨天翔</p>
+						<p>类型：奇幻剧</p>
+						<p>地区：大陆</p>
+						<p>上映：2018年</p>
+					</div>
+				</div>
+			  <div><a href=""><img src="../imgs/film07.jpg" alt=""></a>
+				  <div class="tv-p">
+					  <h4><a href="">蓝色生死恋</a></h4>
+					  <p>主演：许凯赵露思</p>
+						<p>类型：爱情剧</p>
+						<p>地区：大陆</p>
+						<p>上映：2016年</p>
+					</div>
+				</div>
+			  <div><a href=""><img src="../imgs/tv01.jpg" alt=""></a>
+				  <div class="tv-p">
+					  <h4><a href="">倚天屠龙记</a></h4>
+					  <p>主演：曾舜晞 陈钰琪</p>
+						<p>类型：国产剧</p>
+						<p>地区：大陆</p>
+						<p>上映：2015年</p>
+					</div>
+				</div>
+			  <div><a href=""><img src="../imgs/tv02.jpg" alt=""></a>
+				  <div class="tv-p">
+					  <h4><a href="">都挺好</a></h4>
+					  <p>主演：姚晨 倪大红</p>
+						<p>类型：国产剧</p>
+						<p>地区：大陆</p>
+						<p>上映：2019年</p>
+					</div>
+				</div>
+			  <div><a href=""><img src="../imgs/tv03.jpg" alt=""></a>
+				  <div class="tv-p">
+					  <h4><a href="">新白娘子传奇</a></h4>
+					  <p>主演：于朦胧 鞠婧祎</p>
+						<p>类型：国产剧</p>
+						<p>地区：大陆</p>
+						<p>上映：2019年</p>
+					</div>
+				</div>
+			  <div><a href=""><img src="../imgs/tv04.jpg" alt=""></a>
+				  <div class="tv-p">
+					  <h4><a href="">青春斗</a></h4>
+					  <p>主演：郑爽 盖玥希</p>
+						<p>类型：国产剧</p>
+						<p>地区：大陆</p>
+						<p>上映：2018年</p>
+					</div>
+				</div>
+			  <div><a href=""><img src="../imgs/tv05.jpg" alt=""></a>
+				  <div class="tv-p">
+					  <h4><a href="">东宫</a></h4>
+					  <p>主演：彭小苒 陈星旭</p>
+						<p>类型：国产剧</p>
+						<p>地区：大陆</p>
+						<p>上映：2017年</p>
+					</div>
+				</div>
+			  <div><a href=""><img src="../imgs/tv06.jpg" alt=""></a>
+				  <div class="tv-p">
+					  <h4><a href="">只为遇见你</a></h4>
+					  <p>主演：张铭恩 文咏珊</p>
+						<p>类型：国产剧</p>
+						<p>地区：大陆</p>
+						<p>上映：2015年</p>
+					</div>
+				</div>
+			  <div><a href=""><img src="../imgs/tv07.jpg" alt=""></a>
+				  <div class="tv-p">
+					  <h4><a href="">爱上北斗星的你</a></h4>
+					  <p>主演：徐璐 张铭恩</p>
+						<p>类型：国产剧</p>
+						<p>地区：大陆</p>
+						<p>上映：2018年</p>
+					</div>
+				</div>
+	    </div>
+			</div>
+			<!--二楼左侧内容  -->
+			<div class="tv-nav">
+			  <p>热门影视</p>
+				<hr>
+				<h4><a href="">孤战</a></h4>
+				<h4><a href="">乱世丽人行</a></h4>
+				<h4><a href="">守护丽人</a></h4>
+				<h4><a href="">最后一张签证</a></h4>
+				<h4><a href="">遇见爱情的利先生</a></h4>
+				<h4><a href="">一年级毕业季</a></h4>
+				<h4><a href="">孤芳不自赏</a></h4>
+				<h4><a href="">最强大脑第四季</a></h4>
+				<h4><a href="">鬼怪</a></h4>
+				<h4><a href="">漂亮的李慧珍</a></h4>
+			</div>
+				<div class="page-selection">
+					<ul>
+					<li><a href="" class="home-page">首页</a></li>
+					<li><a href="" class="prev">上一页</a></li>
+					<li><a href="" class="a">1</a></li>
+					<li><a href="" class="a">2</a></li>
+					<li><a href="" class="a">3</a></li>
+					<li><a href="" class="a">4</a></li>
+					<li><a href="" class="a">5</a></li>
+					<li><a href="" class="next">下一页</a></li>
+					<li><a href="" class="end-page">尾页</a></li>
+				</ul>
+				</div>
+		</section>
+	</div>
+	<iframe class="my-footer" src="footer.html" frameborder="0" scrolling="no"></iframe>
+</body>
+</html>
